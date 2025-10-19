@@ -1,0 +1,129 @@
+:root {
+  --bg-light: #f9f9f9;
+  --text-light: #333;
+  --bg-dark: #222;
+  --text-dark: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+.todo-container {
+  background: rgba(255,255,255,0.9);
+  border-radius: 15px;
+  padding: 25px 30px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark .todo-container {
+  background: #333;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.theme-toggle {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.theme-toggle button {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+}
+
+.input-section {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#addBtn { background-color: #4caf50; color: #fff; }
+#addBtn:hover { background-color: #45a049; }
+
+#clearAllBtn { background-color: #e74c3c; color: #fff; }
+#clearAllBtn:hover { background-color: #c0392b; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: var(--bg-light);
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark li {
+  background: #444;
+  color: #fff;
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-actions button {
+  margin-left: 5px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.task-actions .edit-btn { background-color: #f39c12; color: #fff; }
+.task-actions .edit-btn:hover { background-color: #e67e22; }
+
+.task-actions .delete-btn { background-color: #e74c3c; color: #fff; }
+.task-actions .delete-btn:hover { background-color: #c0392b; }
